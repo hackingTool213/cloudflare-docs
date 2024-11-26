@@ -24,8 +24,9 @@ Confidence level is set on the DLP profile. When you select a confidence in the 
 For inline detections in Gateway, if you would like to see Low and Medium confidence detections but block High confidence detections, Cloudflare recommends using two policies. The first policy should use a Low confidence DLP profile with an Allow action. The second policy should use a High confidence DLP profile with a Block action.
 
 ## Context analysis
-:::note
-Context analysis has been superseded by [confidence levels](/#confidence-levels). Users who had context analysis turned on will be migrated to confidence levels where applicable.
+
+:::caution
+Context analysis has been superseded by [confidence levels](#confidence-levels). Users who had context analysis turned on will be migrated to confidence levels where applicable.
 :::
 
 When it was available, context analysis restricted detections based on proximity keywords to prevent false positives. Proximity keywords had to be detected within a distance of 1000 bytes (~1000 characters) from the original detection to trigger an context-aware detection. For example, the string `123-45-6789` only counted as a detection if in proximity to keywords such as `ssn`.
